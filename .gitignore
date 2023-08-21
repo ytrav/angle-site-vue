@@ -14,6 +14,8 @@ dist-ssr
 coverage
 *.local
 
+/meow.txt
+
 /cypress/videos/
 /cypress/screenshots/
 

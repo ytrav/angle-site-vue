@@ -1,0 +1,18 @@
+// gallery style
+@use 'variables.scss' as v;
+
+.gallery {
+  @include v.flex(row, center, flex-start);
+  .wrapper {
+    max-width: 900px;
+    padding-top: 20px;
+    .images {
+      @include v.flex(row, center, flex-start);
+      flex-wrap: wrap;
+      gap: 20px;
+      img {
+        max-width: 30%;
+      }
+    }
+  }
+}

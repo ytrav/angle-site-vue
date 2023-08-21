@@ -1,0 +1,15 @@
+// used to define color and other variables
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$black: #212529;
+$background: #fcdcdf;
+
+$pink: #F78D97;
+
+$pink-text: #754348;

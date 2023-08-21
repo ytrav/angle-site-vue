@@ -1,0 +1,28 @@
+// various media queries
+@use 'variables.scss' as v;
+
+@media only screen and (max-width: 768px) {
+    header {
+        a:not(.logo) {
+            display: none;
+        }
+    }
+
+  .gallery .wrapper .images img {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+    header {
+        .logo h2 {
+            display: none;
+        }
+    }
+  .gallery .wrapper .images {
+    padding: 0 10px;
+    img {
+      max-width: 100%;
+    }
+  }
+}

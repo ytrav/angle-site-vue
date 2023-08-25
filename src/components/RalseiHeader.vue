@@ -18,6 +18,10 @@ export default {
                     name: "Links",
                     path: "/links"
                 },
+                {
+                    name: "Commissions",
+                    path: "/commissions"
+                },
             ]
         }
     },

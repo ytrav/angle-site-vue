@@ -11,6 +11,7 @@ import './styles/style.scss'
 import './styles/variables.scss'
 import './styles/header.scss'
 import './styles/gallery.scss'
+import './styles/commissions.scss'
 import './styles/viewports.scss'
 
 // define the vue app

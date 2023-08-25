@@ -1,0 +1,60 @@
+// commissions style
+@use 'variables.scss' as v;
+
+.comm-container {
+  .comm-page {
+    h2 {
+      color: v.$pink-text;
+    }
+    .options {
+      margin-top: 20px;
+      @include v.flex(row, center, center);
+      flex-wrap: wrap;
+      gap: 40px;
+      .option-container {
+        position: relative;
+        .option {
+          aspect-ratio: 1/1;
+          max-width: 400px;
+          border: 10px solid pink;
+          border-radius: 25px;
+
+        //   &.clicked {
+        //   }
+        }
+        .checkmark {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          z-index: 1;
+          display: inline-block;
+          width: 44px;
+          height: 44px;
+          background: v.$pink;
+          border-radius: 50%;
+          -ms-transform: rotate(45deg); /* IE 9 */
+          -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+          transform: rotate(45deg);
+          &::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 18px;
+            background-color: #fff;
+            left: 22px;
+            top: 12px;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #fff;
+            left: 16px;
+            top: 24px;
+          }
+        }
+      }
+    }
+  }
+}

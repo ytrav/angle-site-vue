@@ -6,6 +6,8 @@ import RalseiHome from '../views/RalseiHome.vue'
 import RalseiAbout from '../views/RalseiAbout.vue'
 import RalseiGallery from '../views/RalseiGallery.vue'
 import RalseiLinks from '../views/RalseiLinks.vue'
+import RalseiCommissions from '../views/RalseiCommissions.vue'
+
 
 // define router
 const router = createRouter({
@@ -30,6 +32,11 @@ const router = createRouter({
       path: '/links',
       name: 'links',
       component: RalseiLinks
+    },
+    {
+      path: '/commissions',
+      name: 'commissions',
+      component: RalseiCommissions
     },
   ]
 })

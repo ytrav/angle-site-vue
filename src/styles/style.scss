@@ -3,14 +3,20 @@
 
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
 
+@font-face {
+  font-family: 'Home';
+  src: url('../assets/home.ttf');
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   // font-family: "Press Start 2P", cursive;
-  font-family: sans-serif;
+  font-family: 'Home';
   font-weight: normal;
-  //   border: 1px solid rgba(255, 0, 0, 0.658);
+    // border: 1px solid rgba(255, 0, 0, 0.658);
 }
 
 #app {
@@ -33,10 +39,22 @@
 }
 
 .page {
+  @include v.flex(row, center, flex-start);
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   overflow-y: auto;
   top: 69px;
+  .wrapper {
+    max-width: 900px;
+    padding-top: 20px;
+  }
+}
+
+.heading {
+  h1 {
+    color: v.$pink-text;
+    align-self: flex-start;
+  }
 }

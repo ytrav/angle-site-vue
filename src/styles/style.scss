@@ -20,7 +20,8 @@
 }
 
 #app {
-  background-color: v.$background;
+  // background-color: v.$background;
+  background-image: url('../assets/background.webp');
   position: absolute;
   top: 0;
   bottom: 0;
@@ -38,6 +39,27 @@
   transition: opacity 0.1s ease-out;
 }
 
+.hamburger-enter-from,
+.hamburger-leave-to {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.hamburger-enter-active,
+.hamburger-leave-active {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.background-enter-from,
+.background-leave-to {
+  opacity: 0;
+}
+
+.background-enter-active,
+.background-leave-active {
+  transition: opacity 0.15s ease-out;
+}
+
 .page {
   @include v.flex(row, center, flex-start);
   position: absolute;
@@ -50,6 +72,7 @@
     max-width: 900px;
     padding-top: 20px;
   }
+
 }
 
 .heading {
@@ -57,4 +80,15 @@
     color: v.$pink-text;
     align-self: flex-start;
   }
+}
+
+.popup-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #00000054;
+  z-index: 4;
+  backdrop-filter: blur(3px);
 }

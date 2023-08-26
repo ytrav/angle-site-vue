@@ -2,11 +2,15 @@
 @use 'variables.scss' as v;
 
 @media only screen and (max-width: 768px) {
-    header {
-        a:not(.logo) {
-            display: none;
-        }
+  header {
+    a:not(.logo) {
+      display: none;
     }
+    .hamburger {
+      display: flex;
+    }
+    // justify-content: flex-end;
+  }
 
   .gallery .wrapper .images img {
     max-width: 45%;
@@ -14,11 +18,11 @@
 }
 
 @media only screen and (max-width: 576px) {
-    header {
-        .logo h2 {
-            display: none;
-        }
-    }
+  header {
+    // .logo h2 {
+    //   display: none;
+    // }
+  }
   .gallery .wrapper .images {
     padding: 0 10px;
     img {

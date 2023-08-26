@@ -4,6 +4,13 @@
 header {
   &.scrolled {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(5px);
+  }
+  .hamburger {
+    @include v.flex(row, flex-end, center);
+    display: none;
+    flex: 1;
+    cursor: pointer;
   }
   .logo {
     @include v.flex(row, center, center);
@@ -16,7 +23,7 @@ header {
   @include v.flex(row, flex-start, center);
   flex-wrap: wrap;
   gap: 20px;
-  background-color: v.$background;
+  // background-color: v.$background;
   color: v.$pink-text;
   height: 70px;
   padding: 15px;
@@ -26,9 +33,11 @@ header {
   top: -1px;
   width: 100%;
   transition: box-shadow 0.1s ease-out;
-
   a {
     text-decoration: none;
     color: inherit;
+    &.router-link-active {
+      text-decoration: underline;
+    }
   }
 }

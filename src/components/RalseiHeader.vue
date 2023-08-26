@@ -5,24 +5,7 @@ import { useRalseiStore } from '../stores/RalseiStore';
 export default {
     data() {
         return {
-            links: [
-                {
-                    name: "Gallery",
-                    path: "/gallery"
-                },
-                {
-                    name: "About",
-                    path: "/about"
-                },
-                {
-                    name: "Links",
-                    path: "/links"
-                },
-                {
-                    name: "Commissions",
-                    path: "/commissions"
-                },
-            ]
+            
         }
     },
     computed: {
@@ -39,6 +22,9 @@ export default {
             <img src="../assets/hat-logo.png" alt="Ralsei hat">
             <h2>DailyRalsei</h2>
         </RouterLink>
-        <RouterLink v-for="link in links" :key="link" :to="link.path">{{ link.name }}</RouterLink>
+        <RouterLink v-for="link in ralStore.links" :key="link" :to="link.path">{{ link.name }}</RouterLink>
+        <div @click="ralStore.toggleMenu" class="hamburger">
+            <mdicon name="menu" size="30" />
+        </div>
     </header>
 </template>

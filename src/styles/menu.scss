@@ -1,0 +1,36 @@
+// hamburger menu style
+@use 'variables.scss' as v;
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff3f4;
+  z-index: 5;
+  border-radius: 15px 0 0 15px;
+  padding: 15px 0;
+  @include v.flex(column, center, flex-start);
+//   gap: 20px;
+  a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: inherit;
+    padding: 50px 10px;
+    width: 100%;
+    span {
+        margin-left: 3px;
+    }
+    &.router-link-active span::before {
+      content: '✦\00a0\00a0';
+    }
+    &:not(.router-link-active) span::before {
+    //   margin-left: 21px;
+    content: "\00a0\00a0\00a0\00a0\00a0";
+    }
+    &:hover {
+        background-color: #f1e9ea;
+    }
+  }
+}

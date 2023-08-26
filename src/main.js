@@ -6,10 +6,15 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+// import the icons
+import mdiVue from 'mdi-vue/v3'
+import * as mdijs from '@mdi/js'
+
 // import styles, sass styles to be exact
 import './styles/style.scss'
 import './styles/variables.scss'
 import './styles/header.scss'
+import './styles/menu.scss'
 import './styles/gallery.scss'
 import './styles/commissions.scss'
 import './styles/viewports.scss'
@@ -20,5 +25,8 @@ const app = createApp(App)
 // attach the plugins to the app
 app.use(createPinia())
 app.use(router)
+app.use(mdiVue, {
+  icons: mdijs
+})
 
 app.mount('#app')

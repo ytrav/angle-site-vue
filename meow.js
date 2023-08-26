@@ -21,13 +21,13 @@ async function main() {
 
   setTimeout(() => {
     switch (data) {
-      case 1:
+      case 2:
         msg = 'easter egg found!'
         break
-      case 2:
+      case 3:
         msg = 'easter egg found... again!'
         break
-      case 3:
+      case 4:
         msg = 'yes, you found the easter egg once more'
         break
 
@@ -37,7 +37,7 @@ async function main() {
         } else if (data <= 10) {
           msg = 'sigh... this the ' + data + "th time you're opening this, is everything okay?"
         } else if (data <= 21) {
-          msg = "hi, you've opened this for " + data + ' times now.'
+          msg = "hi, you've opened this " + data + ' times now.'
         } else if (data === 50) {
           msg =
             "wow. You actually opened this 50 whole times, congrats on the milestone. You're strong and loved <3"
